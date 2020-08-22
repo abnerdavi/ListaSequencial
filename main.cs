@@ -2,15 +2,14 @@ using System;
 
 class MainClass {
 
-  //Faça um Programa que peça dois números e imprima a soma
+  //Exercicio 3) Faça um Programa que peça dois números e imprima a soma
   public static void soma2num(){
     float num1 = pegaNum();
     float num2 = pegaNum();
-    
     Console.WriteLine("\nA soma dos numeros informados é {0}\n", (num1+num2));
   }
 
-  //Faça um Programa que peça as 4 notas bimestrais e mostre a média.
+  //Exercicio 4) Faça um Programa que peça as 4 notas bimestrais e mostre a média.
   public static void calcMedia(){
     
     float[] notas = new float[4];
@@ -24,14 +23,12 @@ class MainClass {
     media = (float)media/4;
 
     Console.WriteLine("\nA media das notas informadas é {0}\n",media);
-    
   }
-
+  //funcao para pegar os valores do usuario
   public static float pegaNum(){
     
     Console.Write("Informe um numero (para decimais, use . ):\n>> ");
     float num = float.Parse(Console.ReadLine());
-    
     return num;
   }
 
@@ -61,12 +58,10 @@ class MainClass {
         default:
           Console.WriteLine("Opcao incorreta!");
           break;
-
       }
       Console.WriteLine("Pressione qualquer tecla para continuar...");
-      Console.ReadKey(true);
-      Console.Clear();
+      Console.ReadKey(true);//para esperar o usuario digitar uma tecla para continuar
+      Console.Clear();//limpa tela
     }
-
   }
 }
